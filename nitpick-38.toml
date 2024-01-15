@@ -23,6 +23,6 @@ enable-extensions="G"
 # E203: Allow whitespace before :
 # Remark: black behavior: with smth() : -> with smth():. BUT a[1 + 1 :2+1] -> a[1 + 1 : 2 + 1]
 # W503: line break before binary operator - conflict with black
-ignore="E402,G002,G200,W503,W504",
+ignore="E402,G002,G200,W503,W504"
 extend-ignore="SFS301,E203,W503"
 
