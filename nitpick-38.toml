@@ -29,52 +29,40 @@ extend-ignore="SFS301,E203,W503"
 [nitpick.files.present]
 ".pre-commit-config.yaml" = "Create the file with the contents below, then run 'pre-commit install'"
 
-[".pre-commit-config.yaml".default_language_version.python]
-python="python3.8.10"
+[".pre-commit-config.yaml".default_language_version]
+python = "python3.8.10"
 
-[".pre-commit-config.yaml"]
-repos = [
-    {
-      "repo": "https://github.com/psf/black",
-      "rev": "22.3.0",
-      "hooks": [
-        {
-          "id": "black"
-        }
-      ]
-    },
-    {
-      "repo": "https://github.com/pycqa/isort",
-      "rev": "5.12.0",
-      "hooks": [
-        {
-          "id": "isort"
-        }
-      ]
-    },
-    {
-      "repo": "https://github.com/pycqa/flake8",
-      "rev": "3.9.2",
-      "hooks": [
-        {
-          "id": "flake8",
-          "additional_dependencies": [
-            "flake8-quotes==3.2.0",
-            "flake8-print==4.0.0",
-            "flake8-logging-format==0.6.0",
-            "flake8-sfs==0.0.3",
-            "deal"
-          ]
-        }
-      ]
-    },
-    {
-      "repo": "https://github.com/seddonym/import-linter",
-      "rev": "v1.8.0",
-      "hooks": [
-        {
-          "id": "import-linter"
-        }
-      ]
-    }
-  ]
+[[".pre-commit-config.yaml".repos]]
+repo = "https://github.com/psf/black"
+rev = "22.3.0"
+
+  [[".pre-commit-config.yaml".repos.hooks]]
+  id = "black"
+
+[[".pre-commit-config.yaml".repos]]
+repo = "https://github.com/pycqa/isort"
+rev = "5.12.0"
+
+  [[".pre-commit-config.yaml".repos.hooks]]
+  id = "isort"
+
+[[".pre-commit-config.yaml".repos]]
+repo = "https://github.com/pycqa/flake8"
+rev = "3.9.2"
+
+  [[".pre-commit-config.yaml".repos.hooks]]
+  id = "flake8"
+  additional_dependencies = [
+  "flake8-quotes==3.2.0",
+  "flake8-print==4.0.0",
+  "flake8-logging-format==0.6.0",
+  "flake8-sfs==0.0.3",
+  "deal"
+]
+
+[[".pre-commit-config.yaml".repos]]
+repo = "https://github.com/seddonym/import-linter"
+rev = "v1.8.0"
+
+  [[".pre-commit-config.yaml".repos.hooks]]
+  id = "import-linter"
