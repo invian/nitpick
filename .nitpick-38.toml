@@ -16,17 +16,17 @@ max-line-length = 100
 # Check cyclomatic complexity (4 considered upper limit of "good" complexity)
 max-complexity = 7
 # Allow only %s formatting for loggers
-enable-extensions=G
-ignore=
-    E402
-    G002,
+enable-extensions="G"
+ignore=[
+    "E402",
+    "G002",
     # G200 Logging statement uses exception in arguments
-    G200,
+    "G200",
     # W503, W504 line break after binary operator
-    W503, W504
+    "W503", "W504"]
 # Allow only f-string formatting in any formatted string
 # E203: Allow whitespace before :
 # Remark: black behavior: with smth() : -> with smth():. BUT a[1 + 1 :2+1] -> a[1 + 1 : 2 + 1]
 # W503: line break before binary operator - conflict with black
-extend-ignore=SFS301,E203,W503
+extend-ignore=["SFS301","E203","W503"]
 
