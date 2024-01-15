@@ -30,7 +30,7 @@ extend-ignore="SFS301,E203,W503"
 ".pre-commit-config.yaml" = "Create the file with the contents below, then run 'pre-commit install'"
 
 [".pre-commit-config.yaml".default_language_version]
-python = "python3.8.10"
+python = "python3.8"
 
 [[".pre-commit-config.yaml".repos]]
 repo = "https://github.com/psf/black"
