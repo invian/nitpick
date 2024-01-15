@@ -11,22 +11,18 @@ skip = [".gitignore", ".dockerignore"]
 known_first_party = ["experimental"]
 known_third_party = ["telegraf"]
 
-["tox.ini".flake8]
+["setup.cfg".flake8]
 max-line-length = 100
 # Check cyclomatic complexity (4 considered upper limit of "good" complexity)
 max-complexity = 7
 # Allow only %s formatting for loggers
 enable-extensions="G"
-ignore=[
-    "E402",
-    "G002",
-    # G200 Logging statement uses exception in arguments
-    "G200",
-    # W503, W504 line break after binary operator
-    "W503", "W504"]
+# G200 Logging statement uses exception in arguments
+# W503, W504 line break after binary operator
 # Allow only f-string formatting in any formatted string
 # E203: Allow whitespace before :
 # Remark: black behavior: with smth() : -> with smth():. BUT a[1 + 1 :2+1] -> a[1 + 1 : 2 + 1]
 # W503: line break before binary operator - conflict with black
-extend-ignore=["SFS301","E203","W503"]
+ignore="E402,G002,G200,W503,W504",
+extend-ignore="SFS301,E203,W503"
 
