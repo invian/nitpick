@@ -16,15 +16,15 @@ max-line-length = 100
 # Check cyclomatic complexity (4 considered upper limit of "good" complexity)
 max-complexity = 7
 # Allow only %s formatting for loggers
-enable-extensions="G"
+enable-extensions = "G"
 # G200 Logging statement uses exception in arguments
 # W503, W504 line break after binary operator
 # Allow only f-string formatting in any formatted string
 # E203: Allow whitespace before :
 # Remark: black behavior: with smth() : -> with smth():. BUT a[1 + 1 :2+1] -> a[1 + 1 : 2 + 1]
 # W503: line break before binary operator - conflict with black
-ignore="E402,G002,G200,W503,W504,Q000"
-extend-ignore="SFS301,E203,W503"
+ignore = "E402,G002,G200,W503,W504,Q000"
+extend-ignore = "SFS301,E203,W503"
 
 [nitpick.files.present]
 ".pre-commit-config.yaml" = "Create the file with the contents below, then run 'pre-commit install'"
@@ -36,33 +36,33 @@ python = "python3.8.10"
 repo = "https://github.com/psf/black"
 rev = "22.3.0"
 
-  [[".pre-commit-config.yaml".repos.hooks]]
-  id = "black"
+[[".pre-commit-config.yaml".repos.hooks]]
+id = "black"
 
 [[".pre-commit-config.yaml".repos]]
 repo = "https://github.com/pycqa/isort"
 rev = "5.12.0"
 
-  [[".pre-commit-config.yaml".repos.hooks]]
-  id = "isort"
+[[".pre-commit-config.yaml".repos.hooks]]
+id = "isort"
 
 [[".pre-commit-config.yaml".repos]]
 repo = "https://github.com/pycqa/flake8"
 rev = "3.9.2"
 
-  [[".pre-commit-config.yaml".repos.hooks]]
-  id = "flake8"
-  additional_dependencies = [
+[[".pre-commit-config.yaml".repos.hooks]]
+id = "flake8"
+additional_dependencies = [
   "flake8-quotes==3.2.0",
   "flake8-print==4.0.0",
   "flake8-logging-format==0.6.0",
   "flake8-sfs==0.0.3",
-  "deal"
+  "deal",
 ]
 
 [[".pre-commit-config.yaml".repos]]
 repo = "https://github.com/seddonym/import-linter"
 rev = "v1.8.0"
 
-  [[".pre-commit-config.yaml".repos.hooks]]
-  id = "import-linter"
+[[".pre-commit-config.yaml".repos.hooks]]
+id = "import-linter"
