@@ -4,6 +4,11 @@ Nitpick style configuration for python projects
 
 ## How to use
 
+You are expected to have `pyproject.toml`
+with configurations for each tool used here.
+
+This file must be in the root directory of your repository.
+
 ### Local
 
 Add the following to `pyproject.toml`. Change the version if needed.
